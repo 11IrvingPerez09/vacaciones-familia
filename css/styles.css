@@ -176,9 +176,12 @@ main section.seccion-activa {
     aspect-ratio: 3 / 2; /* Mantiene la proporción 300x200 */
   }
 }
-/* Centrar específicamente las imágenes 3 y 10 de la sección "padres" */
+/* Ajustar la imagen 3 y 10 de la sección "padres" para que se vean completas */
 section#padres .gallery .photo-frame:nth-child(3) img,
 section#padres .gallery .photo-frame:nth-child(10) img {
-  object-position: center center;
+  object-fit: contain;
+  object-position: center;
+  /* Opcional: puedes definir un fondo para el espacio extra */
+  background-color: #000;
 }
 
