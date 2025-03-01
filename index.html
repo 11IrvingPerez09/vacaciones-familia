@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fotos de Vacaciones con mi Familia</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Vacaciones en Familia</h1>
+    <nav>
+      <button onclick="mostrarSeccion('familia-completa')"><span>Familia Completa</span></button>
+      <button onclick="mostrarSeccion('padres')"><span>Mis Padres</span></button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Sección para fotos de la familia completa -->
+    <section id="familia-completa" class="seccion-activa">
+      <h2>Familia Completa</h2>
+      <div class="gallery">
+        <div class="photo-frame"><img src="images/familia_completa/familia1.jpg" alt="Familia 1"></div>
+        <div class="photo-frame"><img src="images/familia_completa/familia2.jpg" alt="Familia 2"></div>
+        <div class="photo-frame"><img src="images/familia_completa/familia3.jpg" alt="Familia 3"></div>
+        <div class="photo-frame"><img src="images/familia_completa/familia4.jpg" alt="Familia 4"></div>
+        <div class="photo-frame"><img src="images/familia_completa/familia5.jpg" alt="Familia 5"></div>
+        <div class="photo-frame"><img src="images/familia_completa/familia6.jpg" alt="Familia 6"></div>
+        <div class="photo-frame"><img src="images/familia_completa/familia7.jpg" alt="Familia 7"></div>
+        <div class="photo-frame"><img src="images/familia_completa/familia8.jpg" alt="Familia 8"></div>
+        <div class="photo-frame"><img src="images/familia_completa/familia9.jpg" alt="Familia 9"></div>
+        <div class="photo-frame"><img src="images/familia_completa/familia10.jpg" alt="Familia 10"></div>
+      </div>
+    </section>
+
+    <!-- Sección para fotos de mis padres -->
+    <section id="padres" class="seccion-inactiva">
+      <h2>Mis Padres</h2>
+      <div class="gallery">
+        <div class="photo-frame"><img src="images/padres/padres1.jpg" alt="Padres 1"></div>
+        <div class="photo-frame"><img src="images/padres/padres2.jpg" alt="Padres 2"></div>
+        <div class="photo-frame"><img src="images/padres/padres3.jpg" alt="Padres 3"></div>
+        <div class="photo-frame"><img src="images/padres/padres4.jpg" alt="Padres 4"></div>
+        <div class="photo-frame"><img src="images/padres/padres5.jpg" alt="Padres 5"></div>
+        <div class="photo-frame"><img src="images/padres/padres6.jpg" alt="Padres 6"></div>
+        <div class="photo-frame"><img src="images/padres/padres7.jpg" alt="Padres 7"></div>
+        <div class="photo-frame"><img src="images/padres/padres8.jpg" alt="Padres 8"></div>
+        <div class="photo-frame"><img src="images/padres/padres9.jpg" alt="Padres 9"></div>
+        <div class="photo-frame"><img src="images/padres/padres10.jpg" alt="Padres 10"></div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // Función para cambiar entre secciones de la galería
+    function mostrarSeccion(seccionId) {
+      const secciones = document.querySelectorAll("main section");
+      secciones.forEach((seccion) => {
+        seccion.classList.remove("seccion-activa");
+        seccion.classList.add("seccion-inactiva");
+      });
+      const seccionAMostrar = document.getElementById(seccionId);
+      seccionAMostrar.classList.remove("seccion-inactiva");
+      seccionAMostrar.classList.add("seccion-activa");
+    }
+  </script>
+</body>
+</html>
