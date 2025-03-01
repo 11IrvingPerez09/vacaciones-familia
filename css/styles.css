@@ -135,11 +135,13 @@ main section.seccion-activa {
   justify-content: center;
 }
 
+/* Ajuste para que las imágenes se vean completas en sus marcos */
 .photo-frame img {
   border-radius: 6px;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  object-position: center;
 }
 
 /* ============================================
@@ -173,15 +175,8 @@ main section.seccion-activa {
   .photo-frame {
     width: 90%;
     height: auto;
-    aspect-ratio: 3 / 2; /* Mantiene la proporción 300x200 */
+    aspect-ratio: 3 / 2;
   }
 }
-/* Ajustar la imagen 3 y 10 de la sección "padres" para que se vean completas */
-section#padres .gallery .photo-frame:nth-child(3) img,
-section#padres .gallery .photo-frame:nth-child(10) img {
-  object-fit: contain;
-  object-position: center;
-  /* Opcional: puedes definir un fondo para el espacio extra */
-  background-color: #000;
-}
+
 
